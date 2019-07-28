@@ -5,7 +5,10 @@
 <ul>
   {{#each burgers}}
   {{#unless devoured}}
-  {{> burgers/burger-block sleep=true}}
+  <li>
+    {{burger_name}}
+    <button class="change-burger" data-id="{{id}}" data-newburger=true>DEVOUR IT</button>
+  </li>
   {{/unless}}
   {{/each}}
 </ul>
@@ -15,19 +18,26 @@
 <ul>
   {{#each burgers}}
   {{#if devoured}}
-  {{> burgers/burger-block sleep=false}}
+  <li>
+    {{burger_name}}
+
+    <button class="burger" data-id="{{id}}" data-burger disabled=false>DEVOURED</button>
+
+  </li>
   {{/if}}
   {{/each}}
 </ul>
 
 
+
+
 <form class="create-form">
 
   <div class="form-group">
-  <input type="text" id="ca" name="name">
+    <input type="text" id="ca" name="burger_name">
   </div>
-    <button type="submit">Submit</button><br>
-    <label for="ca">Enter a burger you want to eat. Click the "Submit" button</label>
+  <button type="submit">Submit</button><br>
+  <label for="ca">Enter a burger you want to eat. Click the "Submit" button</label>
 
 
   {{!-- <div class="form-group">
