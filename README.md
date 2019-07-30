@@ -24,7 +24,7 @@ Using an home-grown ORM, the app has 4 basic CRUD functions...
 - Used local application on port 8080 URL: `http://localhost:8080/`
 
 ## Heroku
-[Eat-Da-Burger link]()
+[Eat-Da-Burger link](https://powerful-journey-83255.herokuapp.com/)
 
 ## Author
 
