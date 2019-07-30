@@ -1,8 +1,8 @@
 # Eat-Da-Burger
 
-###Node Express Handlebars Assignment
+## Node Express Handlebars Assignment
 
-###Functionality
+### Functionality
 Using an home-grown ORM, the app has 4 basic CRUD functions...
 
 - CREATE a new burger using the "Submit" form, which... * hits a /burger/create route in Express to insert a new burger into the MySQL database * re-routes the webpage back to the index, where the burger is now ready to be eaten column (via Handlebars)
@@ -19,6 +19,12 @@ Using an home-grown ORM, the app has 4 basic CRUD functions...
 - JavaScript
 - CSS
 - HTML
+
+- node server to run server locally.
+- Used local application on port 8080 URL: `http://localhost:8080/`
+
+## Heroku
+[Eat-Da-Burger link]()
 
 ## Author
 
