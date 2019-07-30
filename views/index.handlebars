@@ -9,7 +9,7 @@
 <div class="row">
   <div class="col-sm-12 text-center">
     <form class="burger-input">
-      <label for="ca" class="label">Enter a burger you want to eat. Then click the "Submit" button.</label>
+      <label for="ca" class="label">Please enter your choice of a specific burger and click "Submit" to order it.</label>
       <div class="form-group">
         <input type="text" id="ca" name="burger_name">
       </div>
@@ -26,6 +26,7 @@
       {{#each burgers}}
       {{#unless devoured}}
       <li>
+        {{id}}.
         {{burger_name}}
         <button class="change-burger" data-id="{{id}}" data-newburger=true>DEVOUR IT</button>
         <button class="delete-burger" data-id="{{this.id}}">CANCEL ORDER!</button>
@@ -40,10 +41,11 @@
 
     <h2>Devoured!</h2>
 
-    <ul class="p-0">
+    <ul>
       {{#each burgers}}
       {{#if devoured}}
       <li>
+        {{id}}.
         {{burger_name}}
         <button class="burger" data-id="{{id}}" data-burger=false disabled>DEVOURED</button>
       </li>
