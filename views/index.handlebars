@@ -1,49 +1,55 @@
-<h1>Eat-Da-Burger!</h1>
+<div class="logo">
+  <img src="/assets/images/hamburger.png" alt="Logo">
+</div>
 
-<h2>Devour It!</h2>
+<div class="title text-center">
+  <h1>Eat-Da-Burger!</h1>
+</div>
 
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  <li>
-    {{burger_name}}
-    <button class="change-burger" data-id="{{id}}" data-newburger=true>DEVOUR IT</button>
-  </li>
-  {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  <li>
-    {{burger_name}}
-
-    <button class="burger" data-id="{{id}}" data-burger disabled=false>DEVOURED</button>
-
-  </li>
-  {{/if}}
-  {{/each}}
-</ul>
-
-
-
-
-<form class="create-form">
-
-  <div class="form-group">
-    <input type="text" id="ca" name="burger_name">
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <form class="burger-input">
+      <label for="ca" class="label">Enter a burger you want to eat. Then click the "Submit" button.</label>
+      <div class="form-group">
+        <input type="text" id="ca" name="burger_name">
+      </div>
+      <button type="submit" class="submit-btn">Submit</button><br>
+    </form>
   </div>
-  <button type="submit">Submit</button><br>
-  <label for="ca">Enter a burger you want to eat. Click the "Submit" button</label>
+</div>
 
+<div class="row">
 
-  {{!-- <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div> --}}
+  <div class="col-sm-6 devour">
+    <h2>Devour It!</h2>
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
+      <li>
+        {{burger_name}}
+        <button class="change-burger" data-id="{{id}}" data-newburger=true>DEVOUR IT</button>
+        <button class="delete-burger" data-id="{{this.id}}">CANCEL ORDER!</button>
+      </li>
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
 
-</form>
+  <div class="col-sm-1"></div>
+  <div class="col-sm-5 done">
+
+    <h2>Devoured!</h2>
+
+    <ul class="p-0">
+      {{#each burgers}}
+      {{#if devoured}}
+      <li>
+        {{burger_name}}
+        <button class="burger" data-id="{{id}}" data-burger=false disabled>DEVOURED</button>
+      </li>
+      {{/if}}
+      {{/each}}
+    </ul>
+
+  </div>
+</div>

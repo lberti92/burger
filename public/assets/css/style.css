@@ -1,19 +1,65 @@
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #fcdd8b;
+  color: #3f2d20;
 }
+
+.logo {
+  width: 30%;
+  margin: 100px auto 40px auto;
+}
+
+#ca {
+  width: 470px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+ }
 
 .label {
-  font-weight: bold;
+  font-size: 22px;
+}
+.submit-btn {
+  width: 140px;
+  height: 80px;
+  background-color: #ef8829;
+  border: none;
+  color: white;
+  font-size: 30px;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+.devour,
+.done {
+  background-color: #84bd93;
+  padding: 30px;
+  margin: 50px 0;
 }
 
-.form-group {
-  margin-bottom: 5px;
+h2,
+h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+.change-burger,
+.delete-burger,
+.burger {
+  background-color: #ce593f;
+  border: none;
+  color: white;
+  font-size: 14px;
+  margin-right: 10px;
+  width: 140px;
 }
